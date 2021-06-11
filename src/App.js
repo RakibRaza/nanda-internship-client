@@ -1,3 +1,4 @@
+import Movies from "./components/Movies/Movies";
 import SubmitForm from "./components/SubmitForm/SubmitForm";
 
 
@@ -9,6 +10,7 @@ function App() {
           <SubmitForm />
         </div>
       </div>
+      <Movies />
     </div>
   );
 }
