@@ -6,7 +6,7 @@ const Movies = () => {
   const [movies, setMovies] = useState([])
   const history = useHistory()
   const fetchMovies = () => {
-    fetch('http://localhost:8000/movies')
+    fetch('https://pwr-nanda-internship-1.herokuapp.com/movies')
       .then(res => res.json())
       .then(data => setMovies(data))
       .catch(error => console.error(error))
@@ -17,7 +17,7 @@ const Movies = () => {
   }, [])
 
   const deleteMovie = (id) => {
-    fetch(`http://localhost:8000/delete-movie/${id}`, { method: "DELETE" }).then((res) => res.json())
+    fetch(`https://pwr-nanda-internship-1.herokuapp.com/delete-movie/${id}`, { method: "DELETE" }).then((res) => res.json())
       .then((data) => {
         if (data) {
           setMovies(movies.filter((movie) => movie._id !== id));
@@ -27,7 +27,7 @@ const Movies = () => {
   }
 
   const updateMovie = (id, movie) => {
-    fetch(`http://localhost:8000/update-movie/${id}`, {
+    fetch(`https://pwr-nanda-internship-1.herokuapp.com/update-movie/${id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json; charset=UTF-8",

@@ -15,7 +15,7 @@ const SubmitForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    fetch('http://localhost:8000/add-movie', {
+    fetch('https://pwr-nanda-internship-1.herokuapp.com/add-movie', {
       method: 'POST',
       body: JSON.stringify(movie),
       headers: {
